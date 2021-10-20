@@ -8,7 +8,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 // import mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://gypsophila:gypsophilappl2@cluster0.sipdn.mongodb.net/test', {
+mongoose.connect('mongodb+srv://gypsophila:gypsophilappl2@gypsophila.mvskd.mongodb.net/gypsophila?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

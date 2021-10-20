@@ -41,7 +41,7 @@ module.exports = {
         req.flash("alertStatus", "danger");
         res.redirect("/admin/signin");
       }
-      const isPasswordMatch = await compare(password, user.password);
+      const isPasswordMatch = await bcrypt.compare(password, user.password);
       if (!isPasswordMatch) {
         req.flash("alertMessage", "Password yang anda masukan tidak cocok!!");
         req.flash("alertStatus", "danger");

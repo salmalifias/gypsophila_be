@@ -22,7 +22,7 @@ module.exports = {
       if (req.session.user == null || req.session.user == undefined) {
         res.render("index", {
           alert,
-          title: "Catering Kita | Login",
+          title: "Gypsophila | Login",
         });
       } else {
         res.redirect("/admin/dashboard");
@@ -70,7 +70,7 @@ module.exports = {
       const booking = await Booking.find();
       const item = await Item.find();
       res.render("admin/dashboard/view_dashboard", {
-        title: "Catering Kita | Dashboard",
+        title: "Gypsophila | Dashboard",
         user: req.session.user,
         member,
         booking,
@@ -90,7 +90,7 @@ module.exports = {
       res.render("admin/category/view_category", {
         category,
         alert,
-        title: "Catering Kita | Category",
+        title: "Gypsophila | Category",
         user: req.session.user,
       });
     } catch (error) {
@@ -151,7 +151,7 @@ module.exports = {
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMessage, status: alertStatus };
       res.render("admin/bank/view_bank", {
-        title: "Catering Kita | Bank",
+        title: "Gypsophila | Bank",
         alert,
         bank,
         user: req.session.user,
@@ -239,7 +239,7 @@ module.exports = {
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMessage, status: alertStatus };
       res.render("admin/item/view_item", {
-        title: "Catering Kita | Item",
+        title: "Gypsophila | Item",
         category,
         alert,
         item,
@@ -297,7 +297,7 @@ module.exports = {
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMessage, status: alertStatus };
       res.render("admin/item/view_item", {
-        title: "Catering Kita | Show Image Item",
+        title: "Gypsophila | Show Image Item",
         alert,
         item,
         action: "show image",
@@ -321,7 +321,7 @@ module.exports = {
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMessage, status: alertStatus };
       res.render("admin/item/view_item", {
-        title: "Catering Kita | Edit Item",
+        title: "Gypsophila | Edit Item",
         alert,
         item,
         category,
@@ -594,7 +594,7 @@ module.exports = {
         .populate("bankId");
 
       res.render("admin/booking/view_booking", {
-        title: "Catering Kita | Booking",
+        title: "Gypsophila | Booking",
         user: req.session.user,
         booking,
       });
@@ -615,7 +615,7 @@ module.exports = {
         .populate("bankId");
 
       res.render("admin/booking/show_detail_booking", {
-        title: "Catering Kita | Detail Booking",
+        title: "Gypsophila | Detail Booking",
         user: req.session.user,
         booking,
         alert,

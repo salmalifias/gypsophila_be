@@ -28,7 +28,7 @@ const itemSchema = new mongoose.Schema({
   },
   unit: {
     type: String,
-    default: 'porsi'
+    default: 'orang'
   },
   sumBooking: {
     type: Number,

@@ -51,17 +51,6 @@ module.exports = {
         }
       }
 
-      // const testimonial = {
-      //   _id: "asd1293uasdads1",
-      //   imageUrl: "images/testimonial2.jpg",
-      //   name: "Happy Family",
-      //   rate: 4.55,
-      //   content:
-      //     "What a great trip with my family and I should try again next time soon ...",
-      //   familyName: "Angga",
-      //   familyOccupation: "Product Designer",
-      // };
-
       res.status(200).json({
         hero: {
           pelanggan: treveler.length,
@@ -87,17 +76,6 @@ module.exports = {
         .populate({ path: "imageId", select: "_id imageUrl" });
 
       const bank = await Bank.find();
-
-      // const testimonial = {
-      //   _id: "asd1293uasdads1",
-      //   imageUrl: "images/testimonial1.jpg",
-      //   name: "Happy Family",
-      //   rate: 4.55,
-      //   content:
-      //     "What a great trip with my family and I should try again next time soon ...",
-      //   familyName: "Angga",
-      //   familyOccupation: "Product Designer",
-      // };
       const testimonial = await Testimonial.find()
         .select("_id name pekerjaan content imageUrl rate")
         .limit(3)
@@ -113,6 +91,31 @@ module.exports = {
     }
   },
 
+  // Register: async (req, res) => {
+  //   const { 
+  //     firstName,
+  //     lastName,
+  //     email,
+  //     phoneNumber,
+  //   } = req.body;
+
+  //   if (
+  //     firstName === undefined ||
+  //     lastName === undefined ||
+  //     email === undefined ||
+  //     phoneNumber === undefined ||
+  //   ) {
+  //     res.status(404).json({ message: "Lengkapi semua field" });
+  //   }
+
+  //   const member = await Member.create({
+  //     firstName,
+  //     lastName,
+  //     email,
+  //     phoneNumber,
+  //   });
+  // },
+  
   bookingPage: async (req, res) => {
     const {
       idItem,

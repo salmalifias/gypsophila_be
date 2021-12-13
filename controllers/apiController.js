@@ -129,12 +129,11 @@ module.exports = {
       phoneNumber,
       accountHolder,
       bankFrom,
-      proofPayment,
     } = req.body;
 
-    // if (!req.file) {
-    //   return res.status(404).json({ message: "Image not found" });
-    // }
+    if (!req.file) {
+      return res.status(404).json({ message: "Image not found" });
+    }
 
     console.log(idItem);
 
@@ -191,7 +190,7 @@ module.exports = {
 
       memberId: member.id,
       payments: {
-        proofPayment: proofPayment,
+        proofPayment: `images/${req.file.filename}`,
         bankFrom: bankFrom,
         accountHolder: accountHolder,
       },

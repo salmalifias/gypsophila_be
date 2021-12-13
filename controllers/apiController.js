@@ -132,9 +132,9 @@ module.exports = {
       proofPayment,
     } = req.body;
 
-    if (!req.file) {
-      return res.status(404).json({ message: "Image not found" });
-    }
+    // if (!req.file) {
+    //   return res.status(404).json({ message: "Image not found" });
+    // }
 
     console.log(idItem);
 

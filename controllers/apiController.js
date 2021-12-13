@@ -190,7 +190,7 @@ module.exports = {
 
       memberId: member.id,
       payments: {
-        proofPayment: `images/${req.file.filename}`,
+        proofPayment: proofPayment,
         bankFrom: bankFrom,
         accountHolder: accountHolder,
       },

@@ -129,6 +129,7 @@ module.exports = {
       phoneNumber,
       accountHolder,
       bankFrom,
+      proofPayment,
     } = req.body;
 
     if (!req.file) {
@@ -190,7 +191,7 @@ module.exports = {
 
       memberId: member.id,
       payments: {
-        proofPayment: `images/${req.file.filename}`,
+        proofPayment: proofPayment,
         bankFrom: bankFrom,
         accountHolder: accountHolder,
       },

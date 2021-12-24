@@ -415,7 +415,7 @@ module.exports = {
       const activity = await Activity.find({ itemId: itemId });
 
       res.render("admin/item/detail_item/view_detail_item", {
-        title: "Staycation | Detail Item",
+        title: "Gypsophila | Detail Item",
         alert,
         itemId,
         feature,

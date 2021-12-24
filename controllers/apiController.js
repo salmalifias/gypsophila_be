@@ -90,31 +90,6 @@ module.exports = {
       res.status(500).json({ message: "Internal server error" });
     }
   },
-
-  // Register: async (req, res) => {
-  //   const { 
-  //     firstName,
-  //     lastName,
-  //     email,
-  //     phoneNumber,
-  //   } = req.body;
-
-  //   if (
-  //     firstName === undefined ||
-  //     lastName === undefined ||
-  //     email === undefined ||
-  //     phoneNumber === undefined ||
-  //   ) {
-  //     res.status(404).json({ message: "Lengkapi semua field" });
-  //   }
-
-  //   const member = await Member.create({
-  //     firstName,
-  //     lastName,
-  //     email,
-  //     phoneNumber,
-  //   });
-  // },
   
   bookingPage: async (req, res) => {
     const {
